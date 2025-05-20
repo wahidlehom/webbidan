@@ -25,8 +25,8 @@
 
     <header class="main-header">
       <a href="<?php echo base_url(); ?>" class="logo">
-        <span class="logo-mini"><b>MN</b></span>
-        <span class="logo-lg"><b>Malas</b>Ngoding</span>
+        <span class="logo-mini"><b>PMB</b></span>
+        <span class="logo-lg"><b>PMB</b> Hj. Siti Saidah, S.Keb</span>
       </a>
 
       <nav class="navbar navbar-static-top">
@@ -99,17 +99,15 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
           <li>
-            <a href="<?php echo base_url() . 'dashboard' ?>">
-
+            <a href="<?php echo base_url().'dashboard' ?>">
               <i class="fa fa-dashboard"></i>
               <span>DASHBOARD</span>
             </a>
           </li>
           <li>
-            <a href="<?php echo base_url() . 'dashboard/kategori'
-                      ?>">
+            <a href="<?php echo base_url() . 'dashboard/obat'?>">
               <i class="fa fa-th"></i>
-              <span>KATEGORI</span>
+              <span>OBAT</span>
             </a>
           </li>
           <li>
@@ -148,16 +146,14 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo
-                      base_url() . 'dashboard/ganti_password' ?>">
+            <a href="<?php echo base_url() . 'dashboard/ganti_password' ?>">
               <i class="fa fa-lock"></i>
               <span>GANTI PASSWORD</span>
             </a>
           </li>
           <li>
             <a href="<?php echo base_url() . 'dashboard/keluar' ?>">
-
-              <i class="fa fa-share"></i>
+             <i class="fa fa-share"></i>
               <span>KELUAR</span>
             </a>
           </li>
