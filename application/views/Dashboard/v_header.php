@@ -43,7 +43,7 @@
                 toggle="dropdown">
                 <img src="<?php echo base_url(); ?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">HAK AKSES :
-                  <b><?php //echo $this->session->userdata('level') 
+                  <b><?php echo $this->session->userdata('level') 
                       ?></b></span>
 
               </a>
@@ -52,10 +52,10 @@
                   <img src="<?php echo base_url(); ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    <?php //echo $this->session->userdata('username') 
+                    <?php echo $this->session->userdata('username') 
                     ?>
                     <small>Hak akses : ****
-                      <?php //echo $this->session->userdata('level') 
+                      <?php echo $this->session->userdata('level') 
                       ?></small>
                   </p>
                 </li>
@@ -85,11 +85,10 @@
           <div class="pull-left info">
 
             <?php
-            // $id_user = $this->session->userdata('id'); 
-            // $user = $this->db->query("select * from pengguna 
-            // where pengguna_id='$id_user'")->row(); 
+            $id_user = $this->session->userdata('id'); 
+            $user = $this->db->query("select * from pengguna where pengguna_id='$id_user'")->row(); 
             ?>
-            <p><?php //echo $user->pengguna_nama; 
+            <p><?php echo $user->pengguna_nama; 
                 ?> cek</p>
             <a href="#"><i class="fa fa-circle text-success"></i>
               Online</a>

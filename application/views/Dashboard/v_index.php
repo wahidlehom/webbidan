@@ -20,18 +20,22 @@
 									<th width="%">Nama</th>
 									<th width="1px">:</th>
 									<td>
-										<p>Nama</p>
+										<?php
+										$id_user = $this->session->userdata('id');
+										$user = $this->db->query("select * from pengguna where pengguna_id='$id_user'")->row();
+										?>
+										<p><?php echo $user->pengguna_nama; ?></p>
 									</td>
 								</tr>
 								<tr>
 									<th width="20%">Username</th>
 									<th width="1px">:</th>
-									<td><p>Nama</p></td>
+									<td><?php echo $this->session->userdata('username') ?></td>
 								</tr>
 								<tr>
 									<th width="20%">Level</th>
 									<th width="1px">:</th>
-									<td><p>Nama</p></td>
+									<td><?php echo $this->session->userdata('level') ?></td>
 								</tr>
 								<tr>
 									<th width="20%">Status</th>
