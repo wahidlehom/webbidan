@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
@@ -110,6 +111,12 @@
             </a>
           </li>
           <li>
+            <a href="<?php echo base_url() . 'dashboard/pasien' ?>">
+              <i class="fa fa-users"></i>
+              <span>PASIEN</span>
+            </a>
+          </li>
+          <li>
             <a href="<?php echo base_url() . 'dashboard/artikel' ?>">
 
               <i class="fa fa-pencil"></i>
@@ -123,13 +130,7 @@
               <span>PAGES</span>
             </a>
           </li>
-          <li>
-            <a href="<?php echo base_url() . 'dashboard/pengguna'
-                      ?>">
-              <i class="fa fa-users"></i>
-              <span>PENGGUNA & HAK AKSES</span>
-            </a>
-          </li>
+          
           <li>
             <a href="<?php echo base_url() . 'dashboard/pengaturan'
                       ?>">

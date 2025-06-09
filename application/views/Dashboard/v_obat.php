@@ -14,14 +14,14 @@
                         <h3 class="box-title">Stok Obat</h3>
                     </div>
                     <div class="box-body">
-                        <table class="table table-bordered">
+                        <table id="example1" class="table table-bordered table-striped">
 
                             <thead>
                                 <tr>
                                     <th width="1%">NO</th>
                                     <th>Nama Obat</th>
                                     <th>Qty</th>
-                                    <th width="10%">OPSI</th>
+                                    <th width="20%">OPSI</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,8 +31,7 @@
 
                                 ?>
                                     <tr>
-                                        <td><?php echo
-                                            $no++; ?></td>
+                                        <td><?php echo $no++; ?></td>
                                         <td><?php echo $o->nama_obat; ?></td>
                                         <td><?php echo $o->stok_obat; ?></td>
                                         <td>

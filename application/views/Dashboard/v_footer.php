@@ -28,6 +28,8 @@
 <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard.js"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
+<script src="<?php echo base_url(); ?>assets/bower_components/datatables.net/js/jquery.dataTables.js"></script>
+<script src="<?php echo base_url(); ?>assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
 </body>
 
 </html>

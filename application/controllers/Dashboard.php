@@ -40,4 +40,41 @@ class Dashboard extends CI_Controller {
         $this->load->view('Dashboard/v_obat', $data);
         $this->load->view('Dashboard/v_footer');
     }
+
+    // FUNCTION HALAMAN PASIEN
+    public function pasien()
+    {
+        $data['pasien']= $this->M_data->get_data('pasien')->result();
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/v_pasien', $data);
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function pasien_tambah()
+    {
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/form/v_pasienTambah');
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function pasien_aksi()
+    {
+        $data = array(
+            'nama_istri' => $this->input->post('namaIstri'),
+            'nik_istri' => $this->input->post('nikIstri'),
+            'pendidikan_istri' => $this->input->post('pendidikanIstri'),
+            'golDarah_istri' => $this->input->post('golDarahIstri'),
+            'pekerjaan_istri' => $this->input->post('pekerjaanIstri'),
+            'noTelpon_istri' => $this->input->post('noTelponIstri'),
+            'nama_suami' => $this->input->post('namaSuami'),
+            'nik_suami' => $this->input->post('nikSuami'),
+            'pendidikan_suami' => $this->input->post('pendidikanSuami'),
+            'golDarah_suami' => $this->input->post('golDarahSuami'),
+            'pekerjaan_suami' => $this->input->post('pekerjaanSuami'),
+            'noTelpon_suami' => $this->input->post('noTelponSuami')
+        );
+
+        $this->M_data->insert_data($data, 'pasien');
+        redirect('dashboard/pasien');
+    }
 }
