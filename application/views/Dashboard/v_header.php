@@ -121,16 +121,16 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo base_url() . 'dashboard/artikel' ?>">
+            <a href="<?php echo base_url() . 'dashboard/petugas' ?>">
 
-              <i class="fa fa-pencil"></i>
-              <span>ARTIKEL</span>
+              <i class="fa fa-stethoscope"></i>
+              <span>PETUGAS</span>
             </a>
           </li>
           <li>
             <a href="<?php echo base_url() . 'dashboard/pages' ?>">
 
-              <i class="fa fa-files-o"></i>
+              <i class="fa fa-stethoscope"></i>
               <span>PAGES</span>
             </a>
           </li>

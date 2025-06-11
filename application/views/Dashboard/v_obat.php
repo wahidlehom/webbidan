@@ -7,8 +7,16 @@
     </section>
 
     <section class="content">
+        <?php if ($this->session->flashdata('success')): ?>
+            <div id="success-alert" class="alert alert-success" role="alert" style="transition: opacity 0.5s ease;">
+                <?php echo $this->session->flashdata('success'); ?>
+            </div>
+        <?php endif; ?>
         <div class="row">
             <div class="col-lg-6">
+                <a href="<?php echo base_url() . 'dashboard/obat_tambah'; ?>" class="btn btn btn-primary"><i class="fa fa-plus"></i> <span>   Tambah Data Obat</span></a>
+                <br />
+                <br />
                 <div class="box box-primary">
                     <div class="box-header">
                         <h3 class="box-title">Stok Obat</h3>
@@ -49,3 +57,11 @@
         </div>
     </section>
 </div>
+<script>
+    // Menggunakan jQuery untuk menghapus alert setelah 3 detik
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#success-alert').fadeOut('slow');
+        }, 3000); // 3000 milidetik = 3 detik
+    });
+</script>

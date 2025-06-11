@@ -32,7 +32,7 @@ class Dashboard extends CI_Controller {
 		redirect('login?alert=logout');
 	}
 
-    // FUNCTION HALAMAN OBAT
+    //----------------------------------------- FUNCTION HALAMAN OBAT
     public function obat()
     {
         $data['obat']= $this->M_data->get_data('obat')->result();
@@ -41,7 +41,80 @@ class Dashboard extends CI_Controller {
         $this->load->view('Dashboard/v_footer');
     }
 
-    // FUNCTION HALAMAN PASIEN
+    public function obat_tambah()
+    {
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/form/v_obatTambah');
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function obat_aksi()
+    {
+        $data = array(
+            'nama_obat' => $this->input->post('namaObat'),
+            'stok_obat' => $this->input->post('stokObat')
+        );
+
+        $this->M_data->insert_data($data, 'obat');
+        redirect('dashboard/obat');
+    }
+
+    public function obat_edit($id)
+    {
+        $where = array('id_obat' => $id);
+        $data['obat'] = $this->M_data->edit_data($where, 'obat')->result();
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/form/v_obatEdit', $data);
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function obat_update()
+    {
+        $id = $this->input->post('id_obat');
+        $data = array(
+            'nama_obat' => $this->input->post('namaObat'),
+            'stok_obat' => $this->input->post('stokObat')
+        );
+
+        $where = array('id_obat' => $id);
+        $this->M_data->update_data($where, $data, 'obat');
+        // Set flashdata for success message
+        $this->session->set_flashdata('success', 'Data berhasil diubah.');
+        redirect('dashboard/obat');
+    }
+
+    function obat_hapus($id)
+    {
+        $where = array('id_obat' => $id);
+        $this->M_data->delete_data($where, 'obat');
+        // Set flashdata for success message
+        $this->session->set_flashdata('success', 'Data berhasil dihapus.');
+        redirect('dashboard/obat');
+    }
+
+    //------------------------------------- END FUNCTION HALAMAN OBAT
+
+
+    //---------------------------------- FUNCTION HALAMAN PETUGAS
+    public function petugas()
+    {
+        $data['petugas']= $this->M_data->get_data('petugas')->result();
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/v_petugas', $data);
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function petugas_tambah()
+    {
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/form/v_petugasTambah');
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    // ------------------------------END FUNCTION HALAMAN PETUGAS
+
+    
+    //---------------------------------- FUNCTION HALAMAN PASIEN
     public function pasien()
     {
         $data['pasien']= $this->M_data->get_data('pasien')->result();
