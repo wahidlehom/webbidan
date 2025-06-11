@@ -14,7 +14,7 @@
         <?php endif; ?>
         <div class="row">
             <div class="col-lg-12">
-                <a href="<?php echo base_url() . 'dashboard/pasien_tambah'; ?>" class="btn btn btn-primary"><i class="fa fa-plus"></i><span>   Tambah Data Pasien</span></a>
+                <a href="<?php echo base_url() . 'dashboard/pasien_tambah'; ?>" class="btn btn btn-primary"><i class="fa fa-plus"></i><span>   Tambah Data Petugas</span></a>
                 <br />
                 <br />
                 <div class="box box-primary">
