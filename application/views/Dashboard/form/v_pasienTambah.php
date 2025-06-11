@@ -25,7 +25,7 @@
                 <div class="form-group">
                   <label for="">Pendidikan Istri</label>
                   <select class="form-control" name="pendidikanIstri" id="">
-                    <option selected>Pilih Jenjang Pendidikan</option>
+                    <option selected value="">Pilih Jenjang Pendidikan</option>
                     <option value="SD">SD</option>
                     <option value="SMP">SMP</option>    
                     <option value="SMA">SMA</option>
@@ -41,7 +41,7 @@
                 <div class="form-group">
                   <label for="">Golongan Darah Istri</label>
                   <select class="form-control" name="golDarahIstri" id="">
-                    <option selected>Pilih Golongan Darah</option>
+                    <option selected value="">Pilih Golongan Darah</option>
                     <option value="-">-</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -52,7 +52,7 @@
                 <div class="form-group">
                   <label for="">Pekerjaan Istri</label>
                   <select class="form-control" name="pekerjaanIstri" id="">
-                    <option selected>Pilih Pekerjaan</option>
+                    <option selected value="">Pilih Pekerjaan</option>
                     <option value="PNS">PNS</option>
                     <option value="TNI">TNI</option>
                     <option value="Polri">Polri</option>
@@ -76,7 +76,7 @@
                 <div class="form-group">
                   <label for="">Pendidikan Suami</label>
                   <select class="form-control" name="pendidikanSuami" id="">
-                    <option selected>Pilih Jenjang Pendidikan</option>
+                    <option selected value="">Pilih Jenjang Pendidikan</option>
                     <option value="SD">SD</option>
                     <option value="SMP">SMP</option>    
                     <option value="SMA">SMA</option>
@@ -92,7 +92,7 @@
                 <div class="form-group">
                   <label for="">Golongan Darah Suami</label>
                   <select class="form-control" name="golDarahSuami" id="">
-                    <option selected>Pilih Golongan Darah</option>
+                    <option selected value="">Pilih Golongan Darah</option>
                     <option value="-">-</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -103,7 +103,7 @@
                 <div class="form-group">
                   <label for="">Pekerjaan Suami</label>
                   <select class="form-control" name="pekerjaanSuami" id="">
-                    <option selected>Pilih Pekerjaan</option>
+                    <option selected value="">Pilih Pekerjaan</option>
                     <option value="Tidak Bekerja">Tidak Bekerja</option>
                     <option value="PNS">PNS</option>
                     <option value="TNI">TNI</option>

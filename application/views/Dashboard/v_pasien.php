@@ -7,6 +7,11 @@
     </section>
 
     <section class="content">
+        <?php if ($this->session->flashdata('success')): ?>
+            <div id="success-alert" class="alert alert-success" role="alert" style="transition: opacity 0.5s ease;">
+                <?php echo $this->session->flashdata('success'); ?>
+            </div>
+        <?php endif; ?>
         <div class="row">
             <div class="col-lg-12">
                 <a href="<?php echo base_url() . 'dashboard/pasien_tambah'; ?>" class="btn btn btn-primary">Tambah Data Pasien</a>
@@ -73,3 +78,28 @@
         </div>
     </section>
 </div>
+
+<script>
+    
+// Auto-hide the success alert after 3 seconds
+document.addEventListener('DOMContentLoaded', function () {
+    const alert = document.getElementById('success-alert');
+    if (alert) {
+        setTimeout(() => {
+            alert.style.opacity = '0';
+            setTimeout(() => alert.remove(), 500); // Remove from DOM after transition
+        }, 3000);
+    }
+});
+</script>
+
+<script>
+    // Confirmation for delete
+          $('.btn-delete').on('click', function(e) {
+              e.preventDefault();
+              const url = $(this).attr('href');
+              if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                  window.location.href = url;
+              }
+          });
+</script>
