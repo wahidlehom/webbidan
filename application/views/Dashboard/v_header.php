@@ -121,6 +121,12 @@
             </a>
           </li>
           <li>
+            <a href="<?php echo base_url() . 'dashboard/catatanKb' ?>">
+              <i class="fa fa-address-book"></i>
+              <span>CATATAN KB</span>
+            </a>
+          </li>
+          <li>
             <a href="<?php echo base_url() . 'dashboard/petugas' ?>">
 
               <i class="fa fa-stethoscope"></i>

@@ -193,4 +193,42 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('success', 'Data berhasil dihapus.');
         redirect('dashboard/pasien');
     }
+// ------------------------------END FUNCTION HALAMAN PASIEN
+
+    //---------------------------------- FUNCTION HALAMAN CATATAN KB
+    public function catatanKb()
+    {
+        $data['catatan_kb'] = $this->M_data->get_data('catatan_kb')->result();
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/v_catatanKb', $data);
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function catatanKb_tambah()
+    {
+        $data['pasien'] = $this->M_data->get_data('catatan_kb')->result();
+        $this->load->view('Dashboard/v_header');
+        $this->load->view('Dashboard/form/v_catatanKbTambah', $data);
+        $this->load->view('Dashboard/v_footer');
+    }
+
+    public function catatanKb_aksi()
+    {
+        $data = array(
+            'id_pasien' => $this->input->post('idPasien'),
+            'tanggal_datang' => $this->input->post('tanggalDatang'),
+            'tanggal_kembali' => $this->input->post('tanggalKembali'),
+            'jenis_kb' => $this->input->post('jenisKb'),
+            'program_kb' => $this->input->post('programKb'),
+            'berat_badan' => $this->input->post('beratBadan'),
+            'tinggi_badan' => $this->input->post('tinggiBadan'),
+            'tensi_darah' => $this->input->post('tensiDarah'),
+            'keterangan' => $this->input->post('keterangan')
+        );
+
+        $this->M_data->insert_data($data, 'catatan_kb');
+        redirect('dashboard/catatanKb');
+    }
+
+    // -----------------------------END FUNCTION HALAMAN CATATAN KB
 }
